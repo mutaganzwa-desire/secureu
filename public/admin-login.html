@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureU Admin Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-auth-body">
+    <div class="auth-grid">
+      <section class="auth-side">
+        <a class="brand" href="/">
+          <img src="assets/logo.svg" alt="SecureU logo" class="brand-logo" />
+        </a>
+        <span class="section-tag">Dedicated administration experience</span>
+        <h1>SecureU Admin Portal</h1>
+        <p>
+          Review reports, track severity, and update incident progress from a workspace that is separated from the public user platform.
+        </p>
+        <div class="auth-points">
+          <div>✔ Separate portal for administrators</div>
+          <div>✔ Dashboard metrics and report tracking</div>
+          <div>✔ Clean workflow for demo presentation</div>
+        </div>
+      </section>
+
+      <main class="auth-main">
+        <section class="auth-card glass">
+          <img src="assets/logo-mark.svg" alt="SecureU mark" class="auth-logo-mark" />
+          <h2>Administrator Login</h2>
+          <p class="muted">Use the demo credentials below to access the admin dashboard.</p>
+
+          <form action="/admin-login" method="POST" class="report-form">
+            <label>
+              Username
+              <input type="text" name="username" required />
+            </label>
+
+            <label>
+              Password
+              <input type="password" name="password" required />
+            </label>
+
+            <button class="button primary full-width" type="submit">Enter Admin Portal</button>
+          </form>
+
+          <a class="text-link" href="/">← Return to user platform</a>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

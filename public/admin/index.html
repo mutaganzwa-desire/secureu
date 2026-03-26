@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureU Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/admin/admin.css" />
+  </head>
+  <body class="admin-body">
+    <aside class="admin-sidebar">
+      <div class="admin-brand">
+        <img src="/assets/logo-mark.svg" alt="SecureU mark" />
+        <div>
+          <strong>SecureU Admin</strong>
+          <small>Incident operations</small>
+        </div>
+      </div>
+
+      <nav class="admin-nav">
+        <a href="#overview">Overview</a>
+        <a href="#reports">Reports</a>
+        <a href="/">Public Platform</a>
+        <a href="/logout">Logout</a>
+      </nav>
+
+      <div class="admin-side-card">
+        <h4>Demo tip</h4>
+        <p>Show this dashboard after submitting a sample report from the user side to demonstrate the full workflow.</p>
+      </div>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar" id="overview">
+        <div>
+          <span class="section-tag">Administration</span>
+          <h1>Incident Monitoring Dashboard</h1>
+          <p>Track submissions, update status, and prioritize severe reports.</p>
+        </div>
+        <a class="button ghost dark-ghost" href="/logout">Logout</a>
+      </header>
+
+      <section class="admin-metrics" id="metricCards"></section>
+
+      <section class="admin-panels">
+        <article class="admin-panel">
+          <div class="panel-header">
+            <h2>Status Breakdown</h2>
+            <span class="muted">Live summary</span>
+          </div>
+          <div id="statusBreakdown" class="status-breakdown"></div>
+        </article>
+
+        <article class="admin-panel">
+          <div class="panel-header">
+            <h2>Priority Guidance</h2>
+          </div>
+          <ul class="guidance-list">
+            <li><strong>Critical / High:</strong> review first and move to <em>In Review</em> or <em>Resolved</em>.</li>
+            <li><strong>New incidents:</strong> confirm details and classify urgency.</li>
+            <li><strong>Resolved cases:</strong> keep them visible as proof of workflow completion.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="admin-panel reports-panel" id="reports">
+        <div class="panel-header split">
+          <div>
+            <h2>Submitted Reports</h2>
+            <p class="muted">Use the status dropdown to update progress.</p>
+          </div>
+          <button class="button primary" id="refreshBtn" type="button">Refresh</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Reporter</th>
+                <th>Type</th>
+                <th>Severity</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="reportsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/admin/admin.js"></script>
+  </body>
+</html>

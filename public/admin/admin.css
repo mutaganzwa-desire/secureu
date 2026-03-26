@@ -1,0 +1,171 @@
+:root {
+  --admin-bg: #08111f;
+  --admin-panel: #111d31;
+  --admin-panel-2: #0d1728;
+  --admin-border: rgba(255, 255, 255, 0.08);
+  --admin-text: #eaf0ff;
+  --admin-muted: #a3b2d3;
+}
+
+.admin-body {
+  background: radial-gradient(circle at top right, rgba(124, 77, 255, 0.16), transparent 28%), var(--admin-bg);
+  color: var(--admin-text);
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.admin-sidebar {
+  border-right: 1px solid var(--admin-border);
+  background: rgba(3, 9, 18, 0.82);
+  padding: 28px 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.admin-brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.admin-brand img { width: 56px; }
+.admin-brand small { color: var(--admin-muted); display:block; margin-top:4px; }
+
+.admin-nav {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.admin-nav a,
+.text-link {
+  color: #d9e4ff;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid transparent;
+}
+
+.admin-nav a:hover { border-color: rgba(99,224,255,0.35); transform: translateX(3px); }
+
+.admin-side-card,
+.admin-panel,
+.metric-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid var(--admin-border);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.22);
+}
+
+.admin-side-card { padding: 18px; color: var(--admin-muted); }
+.admin-side-card h4 { color: white; margin-top: 0; }
+
+.admin-main { padding: 28px; }
+
+.admin-topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.admin-topbar h1 { margin: 10px 0 8px; font-size: clamp(1.8rem, 2.8vw, 2.8rem); }
+.admin-topbar p, .muted { color: var(--admin-muted); }
+
+.admin-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+.metric-card { padding: 20px; }
+.metric-card .metric-label { color: var(--admin-muted); display:block; margin-bottom:12px; }
+.metric-card strong { font-size: 2rem; display:block; }
+.metric-card span:last-child { color: #d9e4ff; }
+
+.admin-panels {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.admin-panel { padding: 22px; }
+.panel-header { display:flex; justify-content:space-between; align-items:center; gap:16px; margin-bottom: 16px; }
+.panel-header.split { align-items: end; }
+.panel-header h2 { margin: 0; }
+
+.status-breakdown { display:flex; flex-wrap:wrap; gap:10px; }
+.status-pill {
+  padding: 11px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #fff;
+}
+
+.guidance-list { margin: 0; padding-left: 18px; color: #dce6ff; }
+.guidance-list li + li { margin-top: 10px; }
+
+.reports-panel table {
+  background: transparent;
+  min-width: 900px;
+}
+
+.reports-panel th,
+.reports-panel td {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #edf2ff;
+}
+
+.severity-badge,
+.status-badge {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width: 90px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.severity-low { background: rgba(75, 192, 124, 0.18); color: #89f0b1; }
+.severity-medium { background: rgba(255, 196, 61, 0.16); color: #ffd77c; }
+.severity-high { background: rgba(255, 126, 95, 0.16); color: #ffb199; }
+.severity-critical { background: rgba(255, 77, 109, 0.18); color: #ff9eb0; }
+
+.status-new { background: rgba(99, 224, 255, 0.14); color: #9aefff; }
+.status-inreview { background: rgba(255, 196, 61, 0.16); color: #ffe08d; }
+.status-resolved { background: rgba(75, 192, 124, 0.18); color: #9df5bf; }
+
+.admin-select {
+  width: 100%;
+  background: rgba(255,255,255,0.06);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.dark-ghost {
+  color: white;
+  border-color: rgba(255,255,255,0.18);
+}
+
+@media (max-width: 1100px) {
+  .admin-body { grid-template-columns: 1fr; }
+  .admin-sidebar { position: static; height: auto; }
+  .admin-metrics, .admin-panels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+  .admin-main { padding: 18px; }
+  .admin-topbar, .admin-panels, .admin-metrics { grid-template-columns: 1fr; display:grid; }
+}

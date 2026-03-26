@@ -1,0 +1,16 @@
+{
+  "name": "secureu-starter",
+  "version": "1.0.0",
+  "description": "SecureU cybersecurity awareness and incident reporting platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.7.0",
+    "cookie-parser": "^1.4.7",
+    "express": "^4.21.2"
+  }
+}

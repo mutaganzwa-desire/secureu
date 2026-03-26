@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SecureU | Cyber Safety for Students and Communities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+
+    <header class="site-header glass">
+      <nav class="nav shell">
+        <a class="brand" href="#top" aria-label="SecureU home">
+          <img src="assets/logo.svg" alt="SecureU logo" class="brand-logo" />
+          <span class="brand-text">
+            <strong>SecureU</strong>
+            <small>Awareness & Reporting Platform</small>
+          </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#features">Features</a>
+          <a href="#awareness">Awareness Hub</a>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#report">Report</a>
+          <a class="button ghost" href="/admin-login.html">Admin Portal</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Modern cybersecurity education for real people</span>
+          <h1>Understand threats, act faster, and build a safer digital community.</h1>
+          <p class="hero-lead">
+            SecureU combines cybersecurity awareness, guided reporting, and a dedicated admin portal so users can learn, respond, and escalate incidents with confidence.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#report">Report an Incident</a>
+            <a class="button secondary" href="#awareness">Explore Awareness Hub</a>
+          </div>
+
+          <div class="hero-stats">
+            <article class="stat-card glow-card">
+              <strong>3 in 1</strong>
+              <span>Learning, reporting, and monitoring in one platform</span>
+            </article>
+            <article class="stat-card glow-card">
+              <strong>Fast intake</strong>
+              <span>Structured forms help users report incidents clearly</span>
+            </article>
+            <article class="stat-card glow-card">
+              <strong>Admin ready</strong>
+              <span>Separate portal for report review and action</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal reveal-delay-1">
+          <div class="floating-orb orb-1"></div>
+          <div class="floating-orb orb-2"></div>
+          <div class="dashboard-preview glass">
+            <div class="preview-top">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="preview-grid">
+              <div class="preview-panel panel-tall">
+                <span class="mini-label">Threat activity</span>
+                <div class="bars">
+                  <span></span><span></span><span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="preview-panel pulse-panel">
+                <span class="mini-label">Protection status</span>
+                <div class="shield-ring">
+                  <img src="assets/logo-mark.svg" alt="SecureU shield mark" />
+                </div>
+              </div>
+              <div class="preview-panel panel-wide">
+                <span class="mini-label">Recent categories</span>
+                <div class="chip-row">
+                  <span>Phishing</span>
+                  <span>Malware</span>
+                  <span>Scam</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip shell reveal">
+        <div><strong>Designed for:</strong> students, schools, and communities</div>
+        <div><strong>Purpose:</strong> awareness, prevention, and response</div>
+        <div><strong>Outcome:</strong> safer digital behaviour and better incident visibility</div>
+      </section>
+
+      <section id="features" class="section shell">
+        <div class="section-heading reveal">
+          <span class="section-tag">Why SecureU stands out</span>
+          <h2>A more polished, engaging, and practical platform experience</h2>
+          <p>SecureU is built to look professional while still staying simple enough to demo, understand, and use quickly.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="icon-wrap">🛡️</div>
+            <h3>Awareness Hub</h3>
+            <p>Users can explore practical cybersecurity guidance through clean, readable content cards.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-1">
+            <div class="icon-wrap">🚨</div>
+            <h3>Guided Reporting</h3>
+            <p>Incident reporting is structured and user-friendly, helping users provide complete information.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-2">
+            <div class="icon-wrap">📊</div>
+            <h3>Separate Admin Portal</h3>
+            <p>Administrators access a dedicated dashboard that feels distinct from the public user experience.</p>
+          </article>
+          <article class="feature-card reveal reveal-delay-3">
+            <div class="icon-wrap">⚡</div>
+            <h3>Modern UI Motion</h3>
+            <p>Animated reveals, hover states, glowing panels, and layered visuals make the platform more impressive.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="awareness" class="section shell two-column-section">
+        <div class="section-heading reveal">
+          <span class="section-tag">Awareness Hub</span>
+          <h2>Practical knowledge users can act on immediately</h2>
+          <p>Each topic is short, useful, and designed to strengthen cyber awareness without overwhelming the user.</p>
+        </div>
+
+        <div id="article-list" class="article-grid"></div>
+      </section>
+
+      <section id="how-it-works" class="section shell">
+        <div class="section-heading reveal">
+          <span class="section-tag">How it works</span>
+          <h2>Clear user flow from awareness to action</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-step reveal">
+            <span class="step-number">01</span>
+            <div>
+              <h3>Learn the threat</h3>
+              <p>Users start by understanding phishing, password safety, and risky online behaviour.</p>
+            </div>
+          </article>
+          <article class="timeline-step reveal reveal-delay-1">
+            <span class="step-number">02</span>
+            <div>
+              <h3>Report the incident</h3>
+              <p>When something happens, the user submits a report with severity and full incident details.</p>
+            </div>
+          </article>
+          <article class="timeline-step reveal reveal-delay-2">
+            <span class="step-number">03</span>
+            <div>
+              <h3>Admin reviews it</h3>
+              <p>The admin team uses a dedicated dashboard to track new, reviewed, and resolved cases.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="report" class="section shell">
+        <div class="report-layout">
+          <div class="report-copy reveal">
+            <span class="section-tag">Incident reporting</span>
+            <h2>Submit a cybersecurity report in minutes</h2>
+            <p>
+              This form helps users report suspicious activities, unauthorized access, scams, malware incidents, and other digital threats.
+            </p>
+            <ul class="report-points">
+              <li>Simple and structured form</li>
+              <li>Severity classification for prioritization</li>
+              <li>Data stored for admin review</li>
+            </ul>
+          </div>
+
+          <section class="report-card glass reveal reveal-delay-1">
+            <form id="reportForm" class="report-form">
+              <div class="form-row">
+                <label>
+                  Full Name
+                  <input type="text" name="fullName" required />
+                </label>
+                <label>
+                  Email Address
+                  <input type="email" name="email" required />
+                </label>
+              </div>
+
+              <div class="form-row">
+                <label>
+                  Incident Type
+                  <select name="incidentType" required>
+                    <option value="">Select type</option>
+                    <option value="Phishing">Phishing</option>
+                    <option value="Malware">Malware</option>
+                    <option value="Unauthorized Access">Unauthorized Access</option>
+                    <option value="Online Scam">Online Scam</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </label>
+
+                <label>
+                  Severity
+                  <select name="severity" required>
+                    <option value="">Select severity</option>
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                    <option value="Critical">Critical</option>
+                  </select>
+                </label>
+              </div>
+
+              <label>
+                Description
+                <textarea name="description" rows="6" required placeholder="Describe what happened, when it happened, and any suspicious details."></textarea>
+              </label>
+
+              <button class="button primary full-width" type="submit">Submit Report</button>
+              <p id="formMessage" class="form-message"></p>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer shell">
+      <div class="footer-brand">
+        <img src="assets/logo-mark.svg" alt="SecureU mark" />
+        <div>
+          <strong>SecureU</strong>
+          <p>Cyber awareness and incident reporting for a safer digital environment.</p>
+        </div>
+      </div>
+      <a class="button ghost" href="/admin-login.html">Go to Admin Portal</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
