@@ -130,7 +130,11 @@ app.post('/admin-login', (req, res) => {
     `);
   }
 
-  res.cookie('admin_session', 'authenticated', { httpOnly: true });
+  res.cookie('admin_session', 'authenticated', {
+  httpOnly: true,
+  sameSite: 'lax',
+  secure: process.env.NODE_ENV === 'production'
+});
   res.redirect('/admin');
 });
 
@@ -152,8 +156,12 @@ app.patch('/api/admin/reports/:id/status', requireAdmin, (req, res) => {
     return res.status(400).json({ message: 'Invalid status value.' });
   }
 
-  db.prepare('UPDATE incident_reports SET status = ? WHERE id = ?').run(status, id);
-  res.json({ message: 'Status updated successfully.' });
+  const result = db.prepare('UPDATE incident_reports SET status = ? WHERE id = ?').run(status, id);
+  if (result.changes === 0) {
+  return res.status(404).json({ message: 'Report not found.' });
+}
+
+res.json({ message: 'Status updated successfully.' });
 });
 
 app.get('/logout', (req, res) => {
@@ -162,5 +170,5 @@ app.get('/logout', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`SecureU running on http://localhost:${PORT}`);
+  console.log(`SecureU server running on port ${PORT}`);
 });
