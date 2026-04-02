@@ -18,8 +18,8 @@ SecureU is a polished cybersecurity awareness and incident reporting prototype b
 - HTML, CSS, JavaScript
 
 ## How to access the platform
-The SecureU platform is live and running on: https://secureu-app.onrender.com
-N.B: It may take a while to load...
+- The SecureU platform is live and running on: https://secureu-app.onrender.com
+- N.B: It may take a while to load...
 
 ## User pages
 - Home page: `/`
