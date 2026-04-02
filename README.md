@@ -17,16 +17,9 @@ SecureU is a polished cybersecurity awareness and incident reporting prototype b
 - better-sqlite3
 - HTML, CSS, JavaScript
 
-## How to run locally
-1. Download or clone the project.
-2. Open the project folder in VS Code.
-3. Open a terminal in the project folder.
-4. Install dependencies:
-   npm install
-5. Start the server:
-   npm start
-6. Open your browser and go to:
-   http://localhost:3000
+## How to access the platform
+The SecureU platform is live and running on: https://secureu-app.onrender.com
+N.B: It may take a while to load...
 
 ## User pages
 - Home page: `/`
@@ -35,15 +28,6 @@ SecureU is a polished cybersecurity awareness and incident reporting prototype b
 ## Demo admin credentials
 - Username: `admin`
 - Password: `admin123`
-
-## Demo flow suggestion
-1. Show the public home page.
-2. Open the awareness hub.
-3. Submit a sample incident report.
-4. Go to the admin portal.
-5. Log in as admin.
-6. Show the submitted report in the dashboard.
-7. Change the report status to show workflow progress.
 
 ## Notes
 - Incident reports are stored in `db/secureu.db`.
